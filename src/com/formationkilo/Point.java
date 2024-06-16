@@ -1,6 +1,6 @@
 package com.formationkilo;
 
-public class Point {
+public class Point implements Cloneable{
   protected int x;
   protected int y;
   public Point(int x, int y) {
@@ -16,6 +16,11 @@ public class Point {
  @Override
 	public String toString() {
 		return "Point[x="+x+"y="+y+"]";
+	}
+ 
+ @Override
+	public Point clone() throws CloneNotSupportedException {
+		return (Point) super.clone();
 	}
  
 }

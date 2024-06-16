@@ -10,7 +10,11 @@ public abstract class Figure implements Cloneable{
    
    @Override
 	public Figure clone() throws CloneNotSupportedException {
+	   //Point px=p1.clone();
+	   //Point py=p2.clone();
 	   Figure f=(Figure) super.clone();
+	   f.p1=p1.clone();//f.p1=px; SECOND OPTION
+	   f.p2=p2.clone();//f.p2=py; SECOND OPTION
 		return f;
 	}
    public abstract double surface();
